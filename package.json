@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build-js": "snowpack build --optimize",
-        "build-css": "lessc src/less/main.less dist/css/main.min.css --clean-css",
+        "build-js": "snowpack build",
+        "build-css": "lessc src/css/main.less dist/css/main.min.css --clean-css",
         "build": "npm run build-js && npm run build-css"
     },
     "keywords": [],
@@ -14,6 +14,7 @@
     "devDependencies": {
         "snowpack": "^3.8.8",
         "less": "^4.1.1",
-        "less-plugin-clean-css": "^1.5.1"
+        "less-plugin-clean-css": "^1.5.1",
+        "@snowpack/plugin-react-refresh": "^2.3.1"
     }
 }

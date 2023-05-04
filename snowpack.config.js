@@ -1,13 +1,16 @@
 module.exports = {
   mount: {
-    src: "/dist",
+    public: "/",
+    src: "/"
   },
   plugins: [
-    ["@snowpack/plugin-react", { babelOptions: { presets: ["@babel/preset-react"] } }],
+    ["@snowpack/plugin-react-refresh", { babelOptions: { presets: ["@babel/preset-react"] } }],
   ],
-  optimize: {
-    bundle: true,
-    minify: true,
-    target: "es2020",
+  buildOptions: {
+    out: "dist",
+    clean: false
+  },
+  packageOptions: {
+    external: ["react", "react-dom"],
   },
 };
