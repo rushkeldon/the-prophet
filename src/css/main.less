@@ -1,24 +1,24 @@
-@yellow : #EFC369;
-@purple : #A494C0;
-@orange : #D7925F;
-@green : #B5BC67;
-@offBlack : #1D1F20;
-@lightBlue : #87CEFA;
+@yellow: #EFC369;
+@purple: #A494C0;
+@orange: #D7925F;
+@green: #B5BC67;
+@offBlack: #1D1F20;
+@lightBlue: #87CEFA;
 
 body {
-  font-family: "Courier New";
+  font-family: "Courier New", serif;
   color: @green;
   background-color: @offBlack;
   font-size: 16px;
-  padding : 0px 15px;
-  background-image : url(https://spiral9.com/img/goldback.jpg);
+  padding: 0px 15px;
+  background-image: url(https://spiral9.com/img/goldback.jpg);
   background-position: center top;
   background-attachment: fixed;
 }
 
 h1 {
-  margin-top : 10px;
-  margin-bottom : 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .page {
@@ -26,106 +26,110 @@ h1 {
   border-image-source: url(https://spiral9.com/img/border1.png);
   border-image-slice: 40 40;
   border-image-repeat: round;
-  padding : 0px 15px;
+  padding: 0px 15px;
   background-image: url(https://spiral9.com/img/kgback.jpg);
   background-color: #e0e0cf;
   box-shadow: 0px 0px 20px #000;
-  margin-left : auto;
-  margin-right : auto;
-  width : 100%;
-  max-width : 900px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
 }
 
-.chapter{
-  color : @offBlack;
+.chapter {
+  color: @offBlack;
   p {
-    font-weight : 600;
-    margin : 0px 10px;
-    line-height : 160%;
-    margin-bottom : 15px;
+    font-weight: 600;
+    line-height: 160%;
+    margin: 0px 10px 15px;
   }
 }
 
 .lightbox {
-  text-align : center;
+  text-align: center;
 }
 
 nav {
-  text-align : center;
-  margin-top : 40px;
+  text-align: center;
+  margin-top: 40px;
 }
 
-a{
-  color : @lightBlue;
-  text-decoration : none;
-  &:visited{
-    color : @lightBlue;
+a {
+  color: @lightBlue;
+  text-decoration: none;
+
+  &:visited {
+    color: @lightBlue;
   }
-  &:hover{
-    /*color : yellow;*/
+
+  &:hover {
     text-decoration: underline;
   }
 }
 
-.yellow{
-  color : @yellow;
-  /*font-weight: bold;*/
+.yellow {
+  color: @yellow;
 }
 
-.purple{
-  color : @purple;
+.purple {
+  color: @purple;
   font-weight: bold;
   font-size: 18px;
 }
 
-strong{
+strong {
   font-weight: normal;
   font-size: 105%;
 }
 
-.title{
+.title {
   line-height: 1.5;
   margin-left: -3px;
 }
 
 button {
-    box-sizing: border-box;
-    font-family: "Courier New";
-    font-size: 16px;
-    color: @yellow;
-    border: 2px solid @orange;
-    background-color: @offBlack;
-    border-radius: 10px;
-    padding: 12px 16px;
-    outline: 0px;
-    display: inline-block;
-    font-weight: bold;
-    margin-left: 0px;
-    cursor: default;
-    margin-right : 10px;
-    margin-bottom : 10px;
-    &.on{
+  box-sizing: border-box;
+  font-family: "Courier New", serif;
+  font-size: 16px;
+  color: @yellow;
+  border: 2px solid @orange;
+  background-color: @offBlack;
+  border-radius: 10px;
+  padding: 12px 16px;
+  outline: 0px;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 0px;
+  cursor: default;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  &.on {
+    border: 2px solid @purple;
+    color: @green;
+
+    &:hover, &:focus, &:active {
       border: 2px solid @purple;
       color: @green;
-      &:hover, &:focus, &:active {
-        border: 2px solid @purple;
-        color: @green;
-      }
-     }
-    &:hover{
-      color: @orange;
-      border: 2px solid @yellow;
-      cursor: pointer;
-      background-color : black;
     }
-    &:focus{
-        color: @yellow;
-        border: 2px solid @orange;
-        cursor: default;
-    }
-    &:active{
-        color: @yellow;
-        border: 2px solid @yellow;
-        cursor: default;
-    }
+  }
+
+  &:hover {
+    color: @orange;
+    border: 2px solid @yellow;
+    cursor: pointer;
+    background-color: black;
+  }
+
+  &:focus {
+    color: @yellow;
+    border: 2px solid @orange;
+    cursor: default;
+  }
+
+  &:active {
+    color: @yellow;
+    border: 2px solid @yellow;
+    cursor: default;
+  }
 }

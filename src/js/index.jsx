@@ -1,4 +1,3 @@
-// runtime imports provided by skypack - how cool is that??
 import React, { useState, useEffect } from "https://cdn.skypack.dev/react@17.0.1";
 import ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
 
@@ -1281,15 +1280,15 @@ function getRandomElement( array ) {
 
 function App() {
   const [ chapterID, setChapterID ] = useState( targetChapterID || getRandomElement( Object.keys( chapters ) ) );
-  
+
   useEffect( () => {
     window.location.hash = chapterID;
   }, [ chapterID ] );
-  
+
   function Nav() {
     return <nav>{chapterIDs.map( chapterKey => <button onClick={() => setChapterID( chapterKey )}>{chapters[ chapterKey ].title}</button> )} </nav>;
   }
-                                          
+
   return <div className="page">
     {chapters[ chapterID ].html}
     <Nav/>

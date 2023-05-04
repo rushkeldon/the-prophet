@@ -4,20 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build-js": "babel src/js -d dist/js --presets env",
-        "build-css": "lessc src/css/main.less dist/css/main.min.css --clean-css",
+        "build-js": "esbuild src/js/index.jsx --bundle --outfile=dist/js/index.js --loader:.jsx=jsx --external:react --external:react-dom",
+        "build-css": "lessc src/less/main.less dist/css/main.min.css --clean-css",
         "build": "npm run build-js && npm run build-css"
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "use it however you want",
     "devDependencies": {
-        "babel-plugin-transform-react-jsx": "^6.24.1",
-        "babel-preset-react": "^6.24.1",
-        "react": "^17.0.0",
-        "react-dom": "^17.0.0",
-        "babel-cli": "^6.26.0",
-        "babel-preset-env": "^1.7.0",
+        "esbuild": "^0.14.6",
         "less": "^4.1.1",
         "less-plugin-clean-css": "^1.5.1"
     }
