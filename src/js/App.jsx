@@ -14,7 +14,7 @@ export default function App() {
     window.location.hash = chapterID;
   }, [ chapterID ] );
 
-  useEffect(() => {
+  useEffect( () => {
     const handleHashChange = () => {
       // window.location.reload();
       setChapterID( String( window.location.hash ).split( '#' )[ 1 ] );
@@ -22,13 +22,16 @@ export default function App() {
 
     window.addEventListener( 'hashchange', handleHashChange );
 
-    // Clean up the event listener when the component is unmounted
+    // the function that gets returned from useEffect is called when the component is unmounted
     return () => {
+      // clean up the event listener when the component is unmounted
       window.removeEventListener( 'hashchange', handleHashChange );
     };
-  }, []);
 
-  return <div className="page">
+    // an empty dependency array makes the effect run only once (on mount and unmount)
+  }, [] );
+
+  return <div className={ 'page' }>
     { chapters[ chapterID ].html }
     <nav>
       { chapterIDs.map( chapterKey => <button onClick={ () => setChapterID( chapterKey ) }>{ chapters[ chapterKey ].title }</button> ) }

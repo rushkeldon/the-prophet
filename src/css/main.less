@@ -1,9 +1,16 @@
+// colors
 @yellow: #EFC369;
 @purple: #A494C0;
 @orange: #D7925F;
 @green: #B5BC67;
 @offBlack: #1D1F20;
 @lightBlue: #87CEFA;
+
+// breakpoints
+@small: ~"(max-width: 767px)";
+@medium: ~"(min-width: 768px) and (max-width: 991px)";
+@large: ~"(min-width: 992px)";
+
 
 body {
   font-family: "Courier New", serif;
@@ -14,11 +21,27 @@ body {
   background-image: url(https://spiral9.com/img/goldback.jpg);
   background-position: center top;
   background-attachment: fixed;
+  @media @small, @medium {
+    padding : 0;
+    margin : 0;
+  }
+}
+
+#root {
+  margin: 0;
+  padding : 0;
 }
 
 h1 {
+  font-size: 28px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media @small {
+    font-size : 24px;
+  }
+  @media @medium {
+    font-size : 26px;
+  }
 }
 
 .page {
@@ -34,6 +57,10 @@ h1 {
   margin-right: auto;
   width: 100%;
   max-width: 900px;
+  @media @small, @medium {
+    width : 100vw;
+    margin : 0;
+  }
 }
 
 .chapter {
@@ -51,7 +78,7 @@ h1 {
 
 nav {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 a {
