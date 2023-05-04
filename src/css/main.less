@@ -11,11 +11,11 @@
 @medium: ~"(min-width: 768px) and (max-width: 991px)";
 @large: ~"(min-width: 992px)";
 
-
 body {
+  -webkit-transform:translate3d( 0, 0, 0 );
+  transform: translate3d(0, 0, 0);
+  box-sizing: border-box;
   font-family: "Courier New", serif;
-  color: @green;
-  background-color: @offBlack;
   font-size: 16px;
   padding: 0px 15px;
   background-image: url(https://spiral9.com/img/goldback.jpg);
@@ -25,6 +25,15 @@ body {
     padding : 0;
     margin : 0;
   }
+}
+
+*, *:before, *:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  outline : none !important;
 }
 
 #root {
@@ -44,6 +53,10 @@ h1 {
   }
 }
 
+.oval {
+  border-radius: 50%;
+}
+
 .page {
   border: 40px solid #ffefd5;
   border-image-source: url(https://spiral9.com/img/border1.png);
@@ -51,11 +64,10 @@ h1 {
   border-image-repeat: round;
   padding: 0px 15px;
   background-image: url(https://spiral9.com/img/kgback.jpg);
-  background-color: #e0e0cf;
   box-shadow: 0px 0px 20px #000;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width : 100vw;
   max-width: 900px;
   @media @small, @medium {
     width : 100vw;

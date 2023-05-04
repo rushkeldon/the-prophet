@@ -97,7 +97,7 @@ export const chapters = {
         And he answered, <br/>
         People of Orphalese, of what can I speak save of that which is even now moving within your souls?
       </p>
-      <div className="lightbox"><img src="https://spiral9.com/img/ship2.jpg" alt="TheShip"/></div>
+      <div className="lightbox"><img className="oval" src="https://spiral9.com/the-prophet/img/ship2.jpg" alt="TheShip"/></div>
     </div>
   },
   onLove : {
@@ -153,6 +153,10 @@ export const chapters = {
         To return home at eventide with gratitude;<br/>
         And then to sleep with a prayer for the beloved in your heart and a song of praise upon your lips.
       </p>
+      <figure className="lightbox">
+        <img src="https://spiral9.com/the-prophet/img/kahlil_mary_love.gif" alt="Kahlil Gibran and Mary Haskell Painting by Kahlil Gibran"/>
+        <figcaption>Kahlil Gibran and Mary Haskell Painting by Kahlil Gibran</figcaption>
+      </figure>
     </div>
   },
   onMarriage : {
@@ -379,6 +383,10 @@ export const chapters = {
         Only when you are empty are you at standstill and balanced.<br/>
         When the treasure-keeper lifts you to weigh his gold and his silver, needs must your joy or your sorrow rise or fall.
       </p>
+      <figure className="lightbox">
+        <img src="https://spiral9.com/the-prophet/img/kamilah_joy_sorrow.jpg" alt="Kamilah, Kahlil's mother. Painting by Kahlil Gibran"/>
+        <figcaption>Kamilah, Kahlil's mother. Painting by Kahlil Gibran</figcaption>
+      </figure>
     </div>
   },
   onHouses : {
@@ -1257,9 +1265,7 @@ export const chapters = {
     title: 'On Kahlil Gibran',
     html: <div className="chapter">
       <h1>Kahlil Gibran<br/>1883-1931</h1>
-      <p>
-        <div className="lightbox"><img alt="Kahlil Gibran" src="https://spiral9.com/img/gibran.jpg"/></div>
-      </p>
+      <div className="lightbox"><img alt="Kahlil Gibran" src="https://spiral9.com/the-prophet/img/gibran.jpg"/></div>
       <p>
         "His power came from some great reservoir of spiritual life else it could not have been so universal and so potent, but the majesty and beauty of the language with which he clothed it were all his own." —Claude Bragdon
       </p>
