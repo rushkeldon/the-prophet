@@ -1,7 +1,7 @@
 {
-    "name": "TheProphet",
+    "name": "The Prophet",
     "version": "1.0.0",
-    "description": "",
+    "description": "The Prophet is a single page web application that displays the text of the book \"The Prophet\" by Khalil Gibran.",
     "main": "index.js",
     "scripts": {
         "build-js": "snowpack build",
