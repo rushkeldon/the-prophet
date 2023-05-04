@@ -7,6 +7,7 @@ export default function App() {
   const [chapterID, setChapterID] = useState(targetChapterID || getRandomElement(Object.keys(chapters)));
   useEffect(() => {
     window.location.hash = chapterID;
+    window.scrollTo({top: 0, behavior: "smooth"});
   }, [chapterID]);
   useEffect(() => {
     const handleHashChange = () => {

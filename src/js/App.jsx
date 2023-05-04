@@ -12,6 +12,7 @@ export default function App() {
 
   useEffect( () => {
     window.location.hash = chapterID;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [ chapterID ] );
 
   useEffect( () => {
